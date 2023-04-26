@@ -249,6 +249,7 @@ header {
 .p-address {
   color: #ffffff;
   font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.71;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -256,7 +257,6 @@ header {
 .footer-page {
   background-color: #2f303a;
   display: flex;
-  padding-left: 215px;
 }
 .H1-style {
   font-weight: 900;
@@ -529,7 +529,8 @@ header {
 .icon-close {
   margin-top: 8px;
   margin-left: 490px;
-  stroke: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 50%;
 }
 
 .icon-close:active,
@@ -537,7 +538,7 @@ header {
 .icon-close:focus {
   cursor: pointer;
   fill: #2196f3;
-  stroke: #2196f3;
+  border: 1px solid #2196f3;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -550,6 +551,8 @@ header {
 
 .overlay {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
@@ -596,6 +599,7 @@ header {
 
 .newsletter {
   display: flex;
+
   flex-direction: column;
 }
 .newsletter-form {
@@ -605,7 +609,7 @@ header {
 }
 .newsletter-input {
   padding: 15px;
-  padding-right: 295px;
+  width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -614,8 +618,19 @@ header {
   padding-left: 16px;
 }
 
+.newsletter-input:hover,
+.newsletter-input:focus,
+.newsletter-input:active {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
 .button-newsletter {
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 42px;
   padding-right: 28px;
   background: #2196f3;
@@ -630,6 +645,14 @@ header {
   text-align: center;
   letter-spacing: 0.06em;
   gap: 24px;
+}
+
+.button-newsletter:hover,
+.button-newsletter:active,
+.button-newsletter:focus {
+  cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-div {
@@ -683,7 +706,7 @@ header {
   border: none;
 }
 
-.modal-label:focus,
+.modal-label:focus-within,
 .modal-label:active,
 .modal-label:hover {
   border: 1px solid #2196f3;
@@ -691,6 +714,7 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #2196f3;
+  cursor: pointer;
 }
 
 .modal-label-textarea {
